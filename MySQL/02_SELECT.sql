@@ -286,7 +286,7 @@ WHERE salary >= 2000000;
 --  사원명(emp_name), 사수사번(manager_id), 부서코드(dept_code) 조회
 SELECT emp_name, dept_code, manager_id
 FROM employee
-WHERE dept_code IS NULL;
+WHERE dept_code IS NULL AND manager IS NOT NULL;
 -- 3. 연봉(보너스포함X)이 3000만원 이상이고 보너스를 받지 않은 사람들의
 --    사번, 사원명, 급여, 보너스 조회
 SELECT emp_name, emp_id, salary, bonus

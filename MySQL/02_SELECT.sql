@@ -67,7 +67,7 @@ FROM department;
 SELECT emp_name, email, phone, hire_date
 FROM employee;
 -- 5. employee 테이블의 입사일(hire_date), 
-      직원명(emp_name), 급여(salary) 조회
+--    직원명(emp_name), 급여(salary) 조회
 SELECT emp_name, hire_date, salary
 FROM employee;
 

@@ -17,7 +17,7 @@ ORDER BY dept_code; -- 1
 -- 직급 코드(job_code)별 사원 수 조회
 SELECT job_code, count(*)
 FROM employee
-ORDER BY job_code;
+GROUP BY job_code;
 
 
 -- 성별 별(남자/여자) 사원 수 조회

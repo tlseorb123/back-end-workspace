@@ -19,7 +19,7 @@ SELECT first_name, country, city, address, district, last_name
 FROM address    -- actor, city, address, country
 JOIN city USING (city_id)
 JOIN country USING (country_id)
-JOIN actor USING (actor_id);
+JOIN actor USING (last_update);
 
 
 

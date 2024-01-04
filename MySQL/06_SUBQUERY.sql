@@ -187,10 +187,10 @@ SELECT emp_id, emp_name, job_name, salary
 FROM employee 
 JOIN job USING (job_code)
 WHERE job_name = '대리'
-AND salary > SELECT salary
+AND salary > ANY (SELECT salary
 FROM employee e, job j
 WHERE e.job_code = j.job_code
-AND job_name = '과장';
+AND job_name = '과장');
 
 -- salary > 22000000 OR salary > 2500000 OR salary > 37600000
 

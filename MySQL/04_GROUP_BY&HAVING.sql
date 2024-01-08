@@ -102,6 +102,7 @@ SELECT emp_id, emp_name, dept_code, salary
 FROM employee
 WHERE dept_code = 'D5'
 UNION
+
 -- (2) 급여가 300만원 초과인 사람들
 SELECT emp_id, emp_name, dept_code, salary
 FROM employee

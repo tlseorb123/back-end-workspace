@@ -49,6 +49,18 @@ CREATE TABLE member(
     mem_date DATE
 );
 
+CREATE TABLE member( 
+mem_no INT,
+mem_id VARCHAR(20),
+mem_pwd VARCHAR(20),
+mem_name VARCHaR(20),
+gendeer CHAR(3),
+phone VARCHAR(50),
+email VARCHAR(50)
+
+
+);
+
 -- 테이블 구조를 표시해주는 구문 
 DESC member;
 

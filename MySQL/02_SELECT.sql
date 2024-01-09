@@ -116,7 +116,7 @@ SELECT
 	emp_id 사번,
     emp_name 직원명,
     salary 급여,
-    '원' as "단위(원)"
+	'원' as "단위(원)" 
 FROM employee;
 
 /*

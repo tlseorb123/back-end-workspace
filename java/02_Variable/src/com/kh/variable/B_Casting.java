@@ -52,36 +52,35 @@ public class B_Casting {
 	 *  - 강제 형 변환의 경우 데이터의 손실이 발생할 수 있다.
 	 * */
 	public void casting() {
-		double d = 4.12345678904567890; // 15자리
-		System.out.println(d); // 4.1234567890456789
+		double d = 4.12345678901234567890; // 15자리
+		System.out.println(d); // 4.123456789012345
 		
 		float f = (float) d; // 6자리 
 		System.out.println(f); // 4.123457
 		
-		int i = (int) f;
+		int i = (int) f; 
 		System.out.println(i); // 4
 		
-		int sum = (int) (i + d); // 4.0 + 4.1234567890456789 = 8.1234567890456789
-		System.out.println(sum); // 8
+		int sum = (int) (i + d); // 4.0 + 4.123456789012345 = 8.123456789012345
+		System.out.println(sum);
 		
-		int sum2 = i + (int) d; // 4 + 4 = 8
+		int sum2 = i + (int) d; // 4 + 4 = 8 
 		System.out.println(sum2); // 8
 		
-		int number = 128;
-		byte bNumber = (byte) number;
+		int number = 129; 
+		byte bNumber = (byte) number; 
 		
-		// byte는 127까지여서 127을 넘으면 마이너스로 돌아간다.
-		System.out.println(bNumber); // -128
+		System.out.println(bNumber); // -127  
 		
 		
 		// char <-> int : 각 문자들마다 고유한 숫자가 지정되어 있기 때문에 (유니코드, 아스키코드)
 		// 쌍방향으로 형변환 가능  
 		// char는 음수값 저장 불가 => 값의 범위가 0 ~ 65535
 		
-	    int num = /*(int)*/ 'A';
-	    System.out.println(num); // A -> 65
+	    int num = /*(int)*/ 'A'; 
+	    System.out.println(num); // A -> 65 
 	    
-	    char ch = 52143;
-	    System.out.println(ch); // 52143 -> 쮯
+	    char ch = 52143; 
+	    System.out.println(ch);// 52143 -> 찃
 	}
 }

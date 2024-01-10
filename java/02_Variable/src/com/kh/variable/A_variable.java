@@ -6,16 +6,15 @@ public class A_variable {
 	 * 변수(Variable) - 값을 저장하는 "공간"
 	 */
 
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) {	
 
 		// 실행할 메소드가 있는 클래스를 생성(new)
-		A_variable variable = new A_variable();
+	   A_variable a = new A_variable();
 
 		// 생성한 클래스로 메소드 실행(호출)
-//		variable.printValue();
-//		variable.variableTest();
-		variable.constant();
+	  //a.variable.printValue();
+//		a.variable.variableTest();
+		a.constant();
 	}
 
 	public void printValue() {
@@ -25,18 +24,16 @@ public class A_variable {
 		// 원의 둘레 = 반지름(10) x 2 x 3.141592
 		// 원의 넓이 = 반지름(10) x 반지름(10) x 3.141592
 
-		System.out.println(10 * 2 * 3.141592);
-		System.out.println(10 * 10 * 3.141592);
-
-		System.out.println("----------------------------");
-
+        System.out.println(10 * 2 * 3.141592);
+        System.out.println(10 * 10 * 3.141592);
+        
+        System.out.println("------------------------");
 		// 변수를 사용하면
-		int r = 10;
-		double pi = 3.141592;
-
-		System.out.println(r * 2 * pi);
-		System.out.println(r * r * pi);
-
+        int r = 30;
+        double pi = 3.141592;
+        
+        System.out.println(r * 2 * pi);
+        System.out.println(r * r * pi);
 	}
 
 	public void variableTest() {
@@ -61,7 +58,7 @@ public class A_variable {
 		// 스택 메모리에 생성된 공간에 실제 변수값이 저장 
 		// 1. 논리형 : 1byte(=8bit)
 		boolean isTrue; // 변수 선언 
-		isTrue = true;  // 변수 초기화 
+		isTrue = true;   // 변수 초기화 
 		
 		boolean isFalse = false;
 		// isFalse = 1; 에러 방생! 
@@ -135,13 +132,13 @@ public class A_variable {
 		 * - 초기화 이후에는 값을 변경할 수 없다.
 		 * 
 		 * */
-		int age =20;
-		age = 25;
-		System.out.println(age);
-		
-		final int AGE = 30;
-		// AGE = 35; 에러 발생 
-		System.out.println(AGE);
+	    int age = 20; 
+	    age = 25;
+	    System.out.println(age); 
+	    
+	    final int AGE = 30;
+	    // AGE = 35; 에러 발생 
+	    System.out.println(AGE);
 		
 
 	}

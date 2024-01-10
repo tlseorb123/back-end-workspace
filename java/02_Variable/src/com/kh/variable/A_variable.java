@@ -13,8 +13,8 @@ public class A_variable {
 
 		// 생성한 클래스로 메소드 실행(호출)
 	  //a.variable.printValue();
-//		a.variable.variableTest();
-		a.constant();
+		a.variableTest();
+		//a.constant();
 	}
 
 	public void printValue() {

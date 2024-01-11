@@ -19,11 +19,11 @@ SELECT * FROM country; -- country_id, country
 -- 1. customer 테이블의 first_name이 TRACY인 사람들 조회 
 -- country, city, address, district, first_name, last_name : 필요한 컬럼
 -- country, city, address, customer : 필요한 테이블 
-SELECT country, city, address, district, first_name, last_name
-FROM customer
-	JOIN address USING(address_id)
-    JOIN city USING(city_id)
-    JOIN country USING(country_id)
+SELECT country, city, address, district, first_name, last_name 
+FROM customer 
+JOIN address USING (address_id)
+JOIN city USING(city_id)
+JOIN country USING(country_id)
 WHERE first_name = 'TRACY';
 
 -- 2. 배우 JULIA MCQUEEN이 찍은 영화 제목 조회 (title 기준 정렬 10개까지)

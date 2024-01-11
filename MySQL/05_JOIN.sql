@@ -35,28 +35,28 @@
 */
 -- 1) 연결할 두 컬럼명이 다른 경우 (employee : dept_code - department : dept_id)
 -- 사번, 사원명, 부서코드, 부서명을 같이 조회 
-SELECT emp_id, emp_name, dept_code, dept_title
-FROM employee, department
+SELECT emp_id, emp_name, dept_code, dept_id 
+FROM employee, department 
 WHERE dept_code = dept_id;
 
 -- >> ANSI 구문
-SELECT emp_id, emp_name, dept_code, dept_title
-FROM employee
-JOIN department ON (dept_code = dept_id);
+SELECT emp_id, emp_name, dept_code, dept_id 
+FROM employee 
+JOIN department ON (dept_id = dept_code);
 
 -- 일치하는 값이 없는 행은 조회에서 제외된 것 확인!
 -- dept_code가 null인 사원 조회 X
 
 -- 2) 연결할 두 컬럼명이 같은 경우 (employee : job_code - job : job_code)
 -- 사번, 사원명, 직급코드, 직급명 조회 
-SELECT emp_id, emp_name, job_code, job_name
+SELECT emp_id, emp_name, job_code, job_name 
 FROM employee, job
-WHERE job_code = job_code; -- ambiguous : 애매한, 모호한 / 에러 발생 코드!
+WHERE job_code = job_code; -- ambiguous : 애매한, 모호한 / 에러 발생 코드! 
 
 -- 해결방법 1) 테이블명을 이용하는 방법
-SELECT emp_id, emp_name, job.job_code, job_name
-FROM employee, job
-WHERE employee.job_code = job.job_code; 
+SELECT emp_id, emp_name, job.job_code, job_name 
+FROM employee, job 
+WHERE employee.job_code = job.job_code;
 
 -- 해결방법 2) 테이블에 별칭을 부여해서 이용하는 방법 
 SELECT emp_id, emp_name, e.job_code, job_name

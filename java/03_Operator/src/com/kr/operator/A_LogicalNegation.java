@@ -25,4 +25,4 @@ public class A_LogicalNegation {
 	}
 
 }
- 
+  

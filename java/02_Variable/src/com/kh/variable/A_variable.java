@@ -12,7 +12,7 @@ public class A_variable {
 	   A_variable a = new A_variable();
 
 		// 생성한 클래스로 메소드 실행(호출)
-	  //a.variable.printValue();
+	    // a.printValue();
 		a.variableTest();
 		//a.constant();
 	}

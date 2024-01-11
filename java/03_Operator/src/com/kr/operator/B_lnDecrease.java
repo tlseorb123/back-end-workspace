@@ -26,6 +26,7 @@ public class B_lnDecrease {
 	
 	public void method1() {
 		
+		
 		int number = 10;
 		
 		//전위 연산자 테스트

@@ -51,8 +51,8 @@ SELECT lpad('HELLO', 10, 'A');
 SELECT rpad('HELLO', 10, '*');
 
 /*
-  TRIN(컬럼|'문자열')
-  TRIN([LEADING|TRAILING|BOTH] 제거하고자 하는 문자들 FROM 커럼|'문자열')
+  TRIM(컬럼|'문자열')
+  TRIM([LEADING|TRAILING|BOTH] 제거하고자 하는 문자들 FROM 커럼|'문자열')
   - 문자열의 앞/뒤/양쪽에 있는 지정한 문자들을 제거한 나머지 문자열 반환
 */
 SELECT trim('      K  H       '); -- 기본적으로 양쪽에 있는 공백 제거

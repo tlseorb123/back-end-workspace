@@ -43,8 +43,8 @@ INSERT INTO emp
 VALUES('유아지원팀', 400, '정수민', default);
 
 -- 2)
-INSERT INTO emp(emo_id, emp_name, dept_title, hire_date)
-VALUES(400, '백은호', '인사팀', NULL); 
+INSERT INTO emp(emp_id, emp_name, dept_title, hire_date)
+VALUES(400, '백은호', '인사팀', null);
 
 INSERT INTO emp(emp_name, dept_title, emp_id)
 VALUES('양주란', '보안팀', 500);
@@ -59,8 +59,8 @@ VALUES(700, '마케팅팀');
 -- 3)
 -- kh.employee 테이블에서 사번, 이름, 부서명, 입사일을 그대로 가져오기 
 SELECT emp_id, emp_name, dept_title, hire_date 
-FROM kh.employee 
-JOIN kh.employee ON (dept_code = dept_id);
+FROM kh.employee
+JOIN kh.department ON (dept_code = dept_id);
 
 INSERT INTO emp
 SELECT emp_id, emp_name, dept_title, hire_date 
@@ -139,16 +139,14 @@ SELECT * FROM emp_salary;
 START transaction;
 
 -- emp_salary에서 선동일 사장의 급여를 7000000원으로, 보너스를 0.2로 하락 
-UPDATE emp_salary 
+UPDATE emp_salary
 SET salary = 7000000,
-    bonus = 0.2
+	bonus = 0.2
 WHERE emp_name = "선동일";
 
 -- 모든 사원의 급여를 기존 급여에서 10프로 인상한 금액(기존 급여 * 1.1)으로 변경 
-UPDATE emp_salary 
+UPDATE emp_salary
 SET salary = salary * 1.1;
-
-
 
 -- 사번이 200인 사원의 사원번호를 null로 변경 
 UPDATE emp_salary
@@ -193,7 +191,6 @@ ROLLBACK;
 -- emp_salary에서 dept_code가 D5인 직원들을 삭제 
 DELETE FROM emp_salary
 WHERE dept_code = 'D5';
-
 
 SELECT * FROM emp_salary;
 

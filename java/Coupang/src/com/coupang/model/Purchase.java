@@ -1,12 +1,12 @@
 package com.coupang.model;
 
 public class Purchase {
-     
-	private int pur_code;
-	
-	private int pur_date;
-	private String pur_status;
-	
+
+	private int purCode;
+
+	private int purDate;
+	private String purStatus;
+
 	private Customer customer;
 	private Product product;
 }

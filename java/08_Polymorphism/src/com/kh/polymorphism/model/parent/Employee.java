@@ -6,9 +6,6 @@ public class Employee {
 	private int salary;
 	
 	
-	
-	
-	
 	public Employee() {
 		
 		

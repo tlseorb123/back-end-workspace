@@ -48,6 +48,19 @@ public class Notebook extends Product {
 	    this.setpCode(pCode);
 	    setName(name);
 	}
- 
+
+	public Notebook(String cpu) {
+		
+		this.cpu = cpu;
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() +  "Notebook [cpu=" + cpu + "]";
+	}
+
+	
+   
+	
   
 }

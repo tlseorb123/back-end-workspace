@@ -1,4 +1,4 @@
-package com.kr.condition;
+package com.kh.condition;
 
 import java.util.Scanner;
 

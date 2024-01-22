@@ -68,8 +68,9 @@ public class Application {
 		                    ec.getAnnualSalary(result));
 		
 		// 전체 사람들의 연봉 총합은?
-        System.out.println(result.getSalary() + "전체 사람들의 연봉 총합은 "
-		                    + ec.getTotalSalary(result));
+        System.out.println("전체 사람들의 연봉 총합은 "
+		                    + ec.getTotalSalary(empArr));
 	
 	}
 
+}

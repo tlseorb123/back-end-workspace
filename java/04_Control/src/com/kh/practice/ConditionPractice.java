@@ -8,13 +8,18 @@ public class ConditionPractice {
     
 	public static void main(String[] args) {
 		ConditionPractice c = new ConditionPractice();
-		//c.practice1();
+	//	c.practice1();
 	//	c.practice2();
 	//	c.practice3();
 	//	c.practice4();
 	//	c.practice5();
 	//	c.practice6();
 	//	c.practice7();
+	//	c.practice8();
+	//	c.practice9();
+	//	c.practice10();
+		c.practice11();
+		
 	}
 
     /*
@@ -25,7 +30,27 @@ public class ConditionPractice {
        양수만 입력해주세요.
      */
     public void practice1() {
+    	System.out.print("숫자를 한 개 입력하세요 : ");
+    	int number = sc.nextInt();
     	
+    	if(number <= 0 ) { // 양수가 아닌 것들부터 처리!
+    		System.out.println("양수만 입력해주세요");
+    	} else if (number % 2 == 0) {
+    		System.out.println("짝수다");
+    	} else {
+    		System.out.println("홀수다.");
+    	}
+    	/*
+    	if(number > 0) {
+    		if (number % 2 == 0) {
+    			System.out.println("짝수다");
+    		} else {
+    			System.out.println("홀수다");
+    		}
+    	}else {
+    		System.out.println("양수만 입력해주세요");
+    	}
+    	*/
     }
 
     /*
@@ -49,7 +74,7 @@ public class ConditionPractice {
     	if(num1 == num2) {
     		System.out.println(1);
     	}else {
-    		System.out.println(2);
+    		System.out.println(-1);
     	}
     	
     	
@@ -269,27 +294,31 @@ public class ConditionPractice {
     	int num1 = Integer.parseInt(sc.nextLine());
     	System.out.print("숫자 입력 : ");
     	int num2 = Integer.parseInt(sc.nextLine());
-    	System.out.println("연산자 입력(+,-,*,/,% ");
+    	System.out.println("연산자 입력(+,-,*,/,%) :  ");
     	char op = sc.nextLine ().charAt(0);
     	
     	if(num1 <= 0 || num2 <= 0) {
-    		System.out.println("잘못 입력했습니다. 잘못 입력했습니다.");
+    		System.out.println("잘못 입력했습니다. 프로그램을 종료합니다.");
             return;
     	}
     	
+    	int result = 0;
+    	
     	switch(op) {
-    	case '+';
-    	     result = num1 - num2;
+    	case '+':
+    	     result = num1 + num2;
     	     break;
-     	case '-';
-     	     result = num1 * num2;
-
+     	case '-':
+     	     result = num1 - num2;
      	     break;
-     	case '*';
+     	case '*':
+     		result = num1 * num2;
 	     break;
-     	case '/';
+     	case '/':
+     		result = num1 / num2;
 	     break;
-     	case '%' ;
+     	case '%' :
+     		result = num1 % num2;
 	     break;
 	     default:
 	    	 System.out.println("잘못 입력하셨습니다. 프로그램을 종료합니다");
@@ -297,7 +326,7 @@ public class ConditionPractice {
     	}
     	
     	// 두 수가 양수이면서 연산 기호 제대로 입력 받은 경우만 여기까지 옴 ! 
-    	System.out.printf("&d &c %d = %d", num1, op, num2, num2);
+    	System.out.printf("%d %c %d = %d", num1, op, num2, result);
     }
 
     /*
@@ -312,16 +341,18 @@ public class ConditionPractice {
         조회 메뉴입니다.
      */
     public void practice10() {
-    	System.out.println("입력 : ");
-    	System.out.println("수정 : ");
-    	System.out.println("조회 : ");
-    	System.out.println("삭제 : ");
-    	System.out.println("종료 : ");
-    	System.out.println("메누 번호를 입력하세요 : ");
+    	System.out.println("1. 입력");
+    	System.out.println("2. 수정");
+    	System.out.println("3. 조회");
+    	System.out.println("4. 삭제");
+    	System.out.println("9. 종료");
+    	System.out.println("메뉴 번호를 입력하세요 : ");
     	
     	int num = sc.nextInt();
-    	switch(num);
+    	String result = "";
+    	switch(num) {
     	case 1 :
+    		result = "입력 메뉴입니다.";
     		break;
     	case 2 :
     		result = "수정 메뉴입니다";
@@ -332,8 +363,12 @@ public class ConditionPractice {
     	case 4 :
     		result = "삭제 메뉴입니다.";
     		break;
+    	case 9 : 
+    		result = "프로그램이 종료됩니다.";
+    		break;
     }
-
+    	System.out.println(result);
+    }
     /*
         11. 중간고사, 기말고사, 과제점수, 출석회수를 입력하고 Pass 또는 Fail을 출력하세요.
             총 점 100점 중 배점으로는 다음과 같다.
@@ -392,24 +427,27 @@ public class ConditionPractice {
         
      	System.out.println("==========결과===================");
      	
-     	double sum = num1 * 0.2 + num2 * 0.3 + num3;
+     	
      	double score1 = num1 * 0.2;
      	double score2 = num2 * 0.3;
      	double score3 = num3 * 0.3;
-     	double score4 = num4 * 0.2;
-     	double sum = score1 + score2 + score3 + score4 ;
+     	double sum = score1 + score2 + score3 + num4 ;
      	
      			
-     	if(sum >= 70 && result >= 70) {
-     	System.out.println("중간 고사 점수(20) : 16.0 " + score1);
-     	System.out.println("기만 고사 점수(30) : 27.0"); 
-     	System.out.println("과제 점수(30) : 15.0");
-     	System.out.println("출석 점수(20) : 15.0"); 
+     	if(sum >= 70 && num4 >= 20 * 0.7) {
+     	System.out.println("중간 고사 점수(20) :  " + score1);
+     	System.out.println("기만 고사 점수(30) : " + score2); 
+     	System.out.println("과제 점수(30) : " + score3);
+     	System.out.println("출석 점수(20) : " + num4);
+     	System.out.println("총점 : " + sum);
      	System.out.println("PASS");
      	
      	}else {
      		if(sum < 70) {
-     			System.out.println("FAIL [점수 미달] (총점 " + sum  +")
+     			System.out.println("FAIL [점수 미달] (총점 " + sum + ")");
+     		}
+     		if(num4 < 20 * 0.7) {
+     			System.out.println("FAIL [출석 횟수 부족] (" + num4 + "/20)");
      		}
      	}
      	

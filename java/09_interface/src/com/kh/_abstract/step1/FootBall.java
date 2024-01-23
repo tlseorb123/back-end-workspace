@@ -14,4 +14,6 @@ public class FootBall extends Sports  {
 				                                 "명, 손이 아닌 발로 찬다");
 	}
 	
+	
+	
 }

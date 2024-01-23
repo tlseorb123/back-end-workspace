@@ -45,8 +45,7 @@ public class Application {
 		
 		// 다형성 + 객체 배열 
 		Employee[] empArr = {e1, eg2, m2, s2};
-		
-		
+				
 		EmployeeController ec = new EmployeeController();
 		
 		Scanner sc = new Scanner(System.in);
@@ -74,3 +73,5 @@ public class Application {
 	}
 
 }
+
+

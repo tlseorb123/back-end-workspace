@@ -25,10 +25,10 @@ public class EmployeeController {
 		    return annualSalary + engineer.getBonus();
 		}
 			return annualSalary;
-			
+		
 		
 	}
-			// 전체 사람드르이 연봉 총합은?
+			// 전체 사람들의 연봉 총합은?
 	public int getTotalSalary(Employee[] empArr) {
 		int sum = 0;
         for(Employee employee : empArr) {
@@ -37,3 +37,10 @@ public class EmployeeController {
         return sum;
 	}
 }
+
+
+
+
+
+
+

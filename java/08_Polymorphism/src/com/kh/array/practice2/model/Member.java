@@ -1,22 +1,22 @@
 package com.kh.array.practice2.model;
 
 public class Member {
-<<<<<<< HEAD
 
-=======
+
+
       
->>>>>>> 844d0d826ee4e85ce22fda0014b87c7ee2293788
+
 	private String id;
 	private String name;
 	private String password;
 	private String email;
 	private char gender;
 	private int age;
-<<<<<<< HEAD
 
-=======
+
+
 	
->>>>>>> 844d0d826ee4e85ce22fda0014b87c7ee2293788
+
 	public Member() {
 	}
 
@@ -79,18 +79,13 @@ public class Member {
 
 	@Override
 	public String toString() {
-<<<<<<< HEAD
+
 		return "Member [id=" + id + ", name=" + name + ", password=" + password + ", email=" + email + ", gender="
 				+ gender + ", age=" + age + "]";
 	}
 
 }
-=======
-		return "Memver [id=" + id + ", name=" + name + ", password=" + password + ", email=" + email + ", gender="
-				+ gender + ", age=" + age + "]";
-	}
+
 	
 	
-	
-}
->>>>>>> 844d0d826ee4e85ce22fda0014b87c7ee2293788
+

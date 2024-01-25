@@ -143,4 +143,3 @@ public class A_Variable {
 	}
 
 }
-

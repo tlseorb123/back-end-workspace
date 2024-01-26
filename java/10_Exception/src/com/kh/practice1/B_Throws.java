@@ -65,6 +65,6 @@ public class B_Throws {
 			throw new IOException();
 		}
 		
-		System.out.println("method() 종료");
+		System.out.println("method3() 종료");
 	}
 }

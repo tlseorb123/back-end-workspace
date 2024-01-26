@@ -3,6 +3,7 @@ package com.kh.array.practice2;
 import java.util.Scanner;
 
 
+
 import com.kh.array.practice2.controller.MemberController;
 import com.kh.array.practice2.model.Member;
 import com.kh.practice2.exception.DuplicateNameException;
@@ -66,6 +67,7 @@ public class Application {
 				}			
 		} catch(Exception e) {
 			System.out.println("잘못 입력하셨습니다. 숫자를 입력해주세여~");
+			
 		}
 		
 	}	

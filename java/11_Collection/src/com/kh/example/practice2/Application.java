@@ -21,7 +21,7 @@ public class Application {
 		boolean check = true;
 		
 		while(check) {	
-			
+		System.out.println("=== 메뉴 ===");	
 		System.out.println("1.마지막 위치에 추가  ");
 		System.out.println("2.첫 위치에 곡 추가  ");
 		System.out.println("3.전체 곡 목록 출력  ");
@@ -32,15 +32,23 @@ public class Application {
 		System.out.println("8.가수 명 내림차순 정렬  ");
 		System.out.println("9.종료  ");
 		System.out.println("메뉴 번호 입력 : ");
-		
+		int menu = Integer.parseInt(sc.nextLine());
+	    int = 0;
 		try {
-			switch(Integer.parseInt(sc.nextLine())) {
+			switch(menu) {
 			case 1:
-				method3();
+					System.out.println("곡 명 : 비의 랩소디");
+					System.out.println("가수 명 : 임재현");
+				    System.out.println("추가 성공");
 			   break;
 			case 2:
+				
 				break;
 			case 3:
+				System.out.println("***** 전체 곡 목록 출력 *****");
+				if() {
+					
+				}
 				break;
 			case 4:
 				break;

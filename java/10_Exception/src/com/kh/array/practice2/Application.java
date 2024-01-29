@@ -33,6 +33,10 @@ public class Application {
 		 * 그 외의 경우 -> 잘못 입력하셨습니다. 다시 입력해주세요
 		 * 
 		 * */
+
+				
+		
+		
 		boolean check = true;
 		while(check) {
 			System.out.println("최대 등록 가능한 회원 수는 3명입니다.");
@@ -72,6 +76,7 @@ public class Application {
 		
 	}	
 }
+	
 	
 	public void insertMember()  {
 		/*

@@ -17,8 +17,6 @@ public class Application {
 	
 
 	
-	
-	
 
     ArrayList<Integer> lotto = new ArrayList<>();	
 	
@@ -43,7 +41,8 @@ public class Application {
     	  }
         
 }
-     
+    
+      
      count++;
      
      System.out.println("로또 번호 : " + lotto);
@@ -51,7 +50,8 @@ public class Application {
      
      Collections.sort(lotto);
      Collections.sort(myLotto);
-    
+ 
+   
      
      // 멈추는 조건 : 로또 번호와 내 번호가 정확히 일치!
    if(lotto.equals(myLotto)) {

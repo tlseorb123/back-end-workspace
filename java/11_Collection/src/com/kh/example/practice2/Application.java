@@ -33,21 +33,26 @@ public class Application {
 		System.out.println("9.종료  ");
 		System.out.println("메뉴 번호 입력 : ");
 		int menu = Integer.parseInt(sc.nextLine());
-	    int = 0;
+	    
+		int num = 0;
+		
 		try {
 			switch(menu) {
 			case 1:
+				if(num == 1) {
 					System.out.println("곡 명 : 비의 랩소디");
 					System.out.println("가수 명 : 임재현");
-				    System.out.println("추가 성공");
+	    			System.out.println("추가 성공");
+				}
+				
 			   break;
 			case 2:
 				
 				break;
 			case 3:
 				System.out.println("***** 전체 곡 목록 출력 *****");
-				if() {
-					
+				if(num == 3) {
+					System.out.println(num);
 				}
 				break;
 			case 4:

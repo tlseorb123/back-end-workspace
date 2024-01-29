@@ -47,9 +47,7 @@ public class ArrayPractice {
 	 * 2
 	 * */
 	public void method2() {
-		int [] num = {4, -4, 3, -3, 2};  
-        int [] num1 = {4 + -4 + 3 + -3 + 2};
-       
+		
         System.out.print("정수 : ");
         int num = sc.nextInt();
         int[]arr = new int[num];
@@ -80,7 +78,7 @@ public class ArrayPractice {
         
        
 	}
-        System.out.println(answer);
+        System.out.println(arrList);
         System.out.println(sum);
 	}
 	/*
@@ -90,7 +88,9 @@ public class ArrayPractice {
 	 * */
 	public void method3() {
 		String [] food = {"짜장면", "라면", "치킨", "케이크", "피자", "떡볶이"};
-	    System.out.print("주문하실 메뉴를 골라주세요 : ");
+	   // 배열 -> ArrayList
+		ArrayList<String> menuList =new ArrayList<>(Arrays.asList(food));
+		System.out.print("주문하실 메뉴를 골라주세요 : ");
 		String select = sc.nextLine();
 	/*	
 		for(int i=0; i<food.length; i++) {   //for문
@@ -111,7 +111,7 @@ public class ArrayPractice {
 		}
 		System.out.println(check ? "배달 가능" : "배달 불가능"); //삼항연산자 
 	
-		ArrayList<String> flList = ArrayList<>()(Array.asList());
+		
 	
 	
 	
@@ -152,7 +152,8 @@ public class ArrayPractice {
 	
 	char[] charNo =  no.toCharArray();
 	String[] strNo = no.split("");
-	ArrayList<Character> noList = new ArrayList<>(Arrays.asList(strNo));
+	ArrayList<String> noList = new ArrayList<>(Arrays.asList(strNo));
+	
 	for(int i=0; i<noList.size(); i++) {
 		if(i <= 7) {
 			System.out.print(noList.get(i));

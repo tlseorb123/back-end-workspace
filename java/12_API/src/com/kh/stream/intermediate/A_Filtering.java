@@ -22,7 +22,7 @@ public class A_Filtering {
     
 	// distinct : 중복 제거 
 	public void method1() {
-		
+			
 		List<String> names = Arrays.asList("이상현", "정대윤", "이상호","권예빈", "손민정", "정세영", "조세미", "이상현", "정대윤", "이상호");
 	    Stream<String> stream = names.stream();
 	    stream.forEach(name -> System.out.print(name + " "));
@@ -73,7 +73,6 @@ public class A_Filtering {
 	             .filter(student -> student.getGender().equals("여자"))
 	             .forEach(student -> System.out.println(student));
 	 
-	    
 	    System.out.println();
 	    //수학 점수, 영어 점수 둘다 60점 이상인 요소만 출력 
 	    students.stream()
@@ -83,5 +82,7 @@ public class A_Filtering {
 	              .filter(student -> student.getMath() >=60 && student.getEnglish() >= 60)
 	              .distinct()
 	              .forEach(student -> System.out.println(student));
+
 	}
 }
+

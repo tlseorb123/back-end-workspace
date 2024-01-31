@@ -97,7 +97,7 @@ public class Application {
 			Member m = new Member(id, name, password, email, gender, age);
 			mc.insertMember(m);
 		}
-
+   
 	}
 
 	public void updateMember() {

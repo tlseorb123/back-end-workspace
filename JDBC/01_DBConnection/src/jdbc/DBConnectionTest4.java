@@ -33,7 +33,7 @@ public class DBConnectionTest4 {
 			System.out.println(ps.executeUpdate() + "명 삭제!");
 
 		} catch (Exception e) {
-            e.printStackTrace();
+           
 		}
 
 	}

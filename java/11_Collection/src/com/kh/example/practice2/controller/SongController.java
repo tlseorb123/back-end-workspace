@@ -1,9 +1,9 @@
 package com.kh.example.practice2.controller;
 
 import java.util.ArrayList;
+
 import java.util.Collections;
 
-import com.kh.example.practice2.control;
 import com.kh.example.practice2.compare.ArtistDescending;
 import com.kh.example.practice2.compare.TitleAscending;
 import com.kh.example.practice2.model.Song;
@@ -24,21 +24,22 @@ public class SongController {
 	// 3. 객체를 반환하는 static 메서드
 	public static SongController getInstance() {
 		if(instance == null) instance = new SongController();
+		return instance;
 	}
 	
-	public boolean addLastList(String title, String artist) {
-		if (title.equals("") && !artist.equals("")) {
-		return list.add(new Song(title, artist));	
+	public boolean addLastList(Song song) {
+		if (!song.getTitle().equals("") && !song.getArtist().equals("")) {
+		return list.add(song);	
 		}
 		return false;
 	}
 
 	public boolean addFirstList(Song song) {
-		if (!song.getTitle("") && !song.getArtist(""));
+		if (!song.getTitle().equals("") && !song.getArtist().equals(""));
 		list.add(0, song);
 		 return true;
 }
-	public ArrayList<Song> prinAll() {
+	public ArrayList<Song> printAll() {
 		return list;
 	}
 	public Song searchSong(String title) {
@@ -49,30 +50,30 @@ public class SongController {
 	
 	return null;
 	}
-	public Song removeSong(String search, Song update) {
+	public Song removeSong(String title) {
 		for (Song song : list) {
 			if (song.getTitle().equals(title)) {
-               list.remove(list.indexOf(song), update);
+              return list.remove(list.indexOf(song));
 			}
 		}
 		return null;
 	}
-	public void updateSong() {
-		Song song = new control.removeSong(title);
-		for ( song != null) {
-		       System.out.pcintln(song + " 을 삭제했씁니다.");
-		 }else {
-			 System.out.println("삭제할 곡이 없습니다");
-		}
-		}
+	public Song updateSong(String search, Song update) {
+		for (Song song : list) {
+		 if(song.getTitle().equals(search)) {
+			 return list.set(list.indexOf(song), update);
+		 }
+	}
+		return null;
+}
 	public ArrayList<Song> ascTitle() {
 		ArrayList<Song> cloneList = (ArrayList<Song>) list.clone();
 		Collections.sort(cloneList, new TitleAscending());
 	    return cloneList;
 	}
-	public void ArrayList<Song> descArtist() {
+	public ArrayList<Song> descArtist() {
 	ArrayList<Song> cloneList = (ArrayList<Song>) list.clone();
 	Collections.sort(cloneList, new ArtistDescending());
-	return col
+	return cloneList;
 	}
 }

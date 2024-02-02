@@ -21,7 +21,26 @@ SET AUTOCOMMIT = 1;
 DELETE FROM employee_copy WHERE emp_id = 900;
 
 
+CREATE TABLE person(
+id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(20),
+address VARCHAR(30)
+);
 
+INSERT INTO person VALUES(999, 'name', 'address');
 
+SELECT * FROM person;
 
+UPDATE person SET address='충청도' WHERE id = 999;
 
+DELETE FROM person WHERE id = 333;
+
+SELECT * FROM person WHERE id = 111;
+
+CREATE TABLE member(
+id VARCHAR(20) PRIMARY KEY,
+password VARCHAR(20),
+name VARCHAR(20)
+);
+
+SELECT * FROM member;

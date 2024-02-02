@@ -3,6 +3,7 @@ package jdbc;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 import config.ServerInfo;
 
@@ -28,8 +29,8 @@ public class DBConnectionTest3 {
 
 			System.out.println(ps.executeUpdate() + "명 수정!");
 
-		} catch (Exception e) {
-
+		} catch (ClassNotFoundException | SQLException e) {
+         
 		}
 
 	}

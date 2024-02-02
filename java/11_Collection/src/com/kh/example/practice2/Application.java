@@ -86,7 +86,8 @@ public class Application {
 		System.out.println("가수 명 : ");
 		String artist = sc.nextLine();
 
-		boolean result = control.addLastList(title, artist);
+		Song song = new Song(title, artist);
+		boolean result = control.addLastList(song);
 		if (result) {
 			System.out.println("추가 성공");
 		} else {
@@ -142,14 +143,14 @@ public class Application {
 		System.out.println("삭제할 곡 명 :");
 		String title = sc.nextLine();
 
-		boolean check = true;
-	   control.removeSong(title);
+		Song song = control.removeSong(title);
+	   if(song!=null) {
 	   System.out.println(song + "을 삭제 했습니다");
-		if (check) {
+	   }else {
 			System.out.println("삭제할 곡이 없습니다.");
 		}
 	}
-
+	
 	// 6. 특정 곡 수정
 	public void updateSong() {
 		System.out.println("****** 특정 곡 수정 *******");
@@ -162,13 +163,19 @@ public class Application {
 		String artist = sc.nextLine();
 
 		Song update = new Song(title, artist);
-		control.updateSong(search, song));
+		Song song = control.updateSong(search, update);
+		if(song!=null) {
+			System.out.println(song + " 의 값이 변경 되었습니다");
+		}else {
+			System.out.println("수정할 곡을 찾지 못했습니다");
+		}
+		
 	}
 
 	// 7. 곡 명 오름차순 정렬
 	public void ascTitle() {
 		System.out.println("***** 곡 명 오름차순 정렬 ******");
-		for (Song song : cloneList) {
+		for (Song song : control.ascTitle()) {
 			System.out.println(song);
 		}
 	}
@@ -176,9 +183,8 @@ public class Application {
 	// 8. 가수 명 내림차순 정렬
 	public void descArtist() {
 		System.out.println("****** 곡 명 내림차순 정렬 ******");
-		ArrayList<Song> cloneList = (ArrayList<Song>) list.clone();
-		Collections.sort(cloneList, new ArtistDescending());
-		for (Song song : cloneList) {
+		
+		for (Song song : control.descArtist()) {
 			System.out.println(song);
 		}
 	}

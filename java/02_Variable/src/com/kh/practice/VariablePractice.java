@@ -9,24 +9,31 @@ public class VariablePractice {
 
 	public static void main(String[] args) {
 		VariablePractice v = new VariablePractice();
-		// v.method1();
+		 v.method1();
 		// v.method2();
-		v.method3();
+		//v.method3();
 	}
 
 	Scanner sc = new Scanner(System.in); // 전역변수
 
+	//  영화관의 요금표는 다음과 같다.
+	// - 성인 : 10000원
+	// - 청소년 : 7000원 
+	// 성인 2명과 청소년 3명이 영화를 보려고 할 때 지불해야 할 금액을 계산 후 출력하세요.
+	
 	public void method1() {
 
-		int mom = 10000;
-		int mom1 = 7000;
+		int adultPrice = 10000;
+		int teenPrice = 7000;
+		int adultCount = 2;
+		int teenCount = 3;
 
-		System.out.println("성인 2명 : " + 2 * mom + "원");
-
-		System.out.println("청소년 3명 : " + 3 * mom1 + "원\n");
-
-		System.out.println("총 금액 : " + ((mom * 2) + (mom1 * 3) + "원"));
-
+		int adultTotal = adultPrice * adultCount;
+		int teenTotal = teenCount * teenPrice;
+		
+		System.out.printf("성인 %d명 : %d원\n", adultCount, adultTotal);
+		System.out.printf("청소년 %d명 : %d원\n\n", teenCount, teenTotal);
+		System.out.printf("총 금액 : %d원", adultTotal + teenTotal);
 	}
 
 	public void method2() {

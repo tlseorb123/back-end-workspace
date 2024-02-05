@@ -10,6 +10,7 @@ public class MemberController {
 	private Member[] mArr = new Member[3];
 	public int count = 0;
 	
+	
 	// 멤버 추가
 	public void insertMember(Member m) {
 		mArr[count++] = new Member(m.getId(), m.getName(), m.getPassword(), 
@@ -39,10 +40,6 @@ public class MemberController {
 		return mArr;
 	}
 }
-
-   
-  
-
 
 
 

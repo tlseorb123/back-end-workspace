@@ -52,12 +52,23 @@ public class Application {
 	// 1. 전체 책 조회
 	public void printBookAll() {
 		// 반복문을 이용해서 책 리스트 출력
+	String bookAll = sc.nextLine();
+	
+	
 	}
 	// 2. 책 등록
 	public void registerBook() {
 		// 책 제목, 책 저자를 사용자한테 입력 받아
 		// 등록에 성공하면 "성공적으로 책을 등록했습니다." 출력
 		// 실패하면 "책을 등록하는데 실패했습니다." 출력 
+		System.out.println("책 제목 : ");
+		String book = sc.nextLine();
+		
+		System.out.println("책 저자 : ");
+		String bookname = sc.nextLine();
+		
+		
+		
 	}
 	// 3. 책 삭제
 	public void sellBook() {
@@ -65,12 +76,23 @@ public class Application {
 		// 삭제할 책 번호 선택을 사용자한테 입력 받아
 		// 삭제에 성공하면 "성공적으로 책을 삭제했습니다." 출력
 		// 실패하면 "책을 삭제하는데 실패했습니다." 출력 
+		System.out.println("삭제할 책 번호 : ");
+		int bookmenu = sc.nextInt();
 	}
 	// 4. 회원가입 
 	public void registerMember() {
 		// 아이디, 비밀번호, 이름을 사용자한테 입력받아 
 		// 회원가입에 성공하면 "성공적으로 회원가입을 완료하였습니다." 출력
 		// 실패하면 "회원가입에 실패했습니다." 출력
+		System.out.println("아이디 : ");
+		String Id = sc.nextLine();
+		
+		System.out.println("비밀번호 : ");
+		String password = sc.nextLine();
+		
+		System.out.println("이름 : ");
+		String name = sc.nextLine();
+		
 		
 	}
 	// 5. 로그인
@@ -79,6 +101,12 @@ public class Application {
 		// 로그인에 성공하면 "~~님, 환영합니다!" 출력
 	    // --> memberMenu() 호출
 		// 실패하면 "로그인에 실패했습니다."출력
+	System.out.println("아이디 : ");
+	String Id = sc.nextLine();
+	
+	System.out.println();
+	String password = sc.nextLine(); 
+		
 	}
 	public void memberMenu() {
 	  boolean check = true;

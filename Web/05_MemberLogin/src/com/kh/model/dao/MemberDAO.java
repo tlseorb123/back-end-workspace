@@ -36,29 +36,76 @@ public class MemberDAO {
 		close(ps, conn);
 	}
 
-	public int registerMember(Member vo) throws SQLException {
+
+	// DAO 개발할 때 중요한 건 
+	// 매개 변수(파라미터) 뭘 가지고 오는지, 리턴타입 결과 출력이 어떤게 필요한지
+		
+	// 회원가입
+	public int registerMember(Member member) throws SQLException {
 		Connection conn = getConnect();
 
 		String query = "INSERT INTO member VALUES(?,?,?)";
 		PreparedStatement ps = conn.prepareStatement(query);
 
-		ps.setString(1, vo.getId());
-		ps.setString(2, vo.getPassword());
-		ps.setString(3, vo.getName());
+		ps.setString(1, member.getId());
+		ps.setString(2, member.getPassword());
+		ps.setString(3, member.getName());
 
 		int result = ps.executeUpdate();
 		close(ps, conn);
 		return result;
 	}
+	
+	// 로그인 
+		public Member login(String id, String password) throws SQLException {
+			Connection conn = getConnect();
+			
+			String query = "SELECT * FROM member WHERE id=? AND password=?";
+			PreparedStatement ps = conn.prepareStatement(query);
+			
+			ps.setString(1, id);
+			ps.setString(2, password);
+			
+			ResultSet rs = ps.executeQuery();
+			Member member = null;
+			
+			if(rs.next()) {
+				member = new Member(rs.getString("id"), rs.getString("password"), rs.getString("name"));
+			}
+			
+			close(rs, ps, conn);
+			return member;
+		}
+		
+		// 회원검색
+		public Member findMember(String id) throws SQLException {
+			Connection conn = getConnect();
+			
+			String query = "SELECT * FROM member WHERE id=?";
+			PreparedStatement ps = conn.prepareStatement(query);
+			ps.setString(1, id);
+			
+			ResultSet rs = ps.executeQuery();
+			Member member = null;
+			
+			if(rs.next()) {
+				member = new Member(rs.getString("id"), rs.getString("password"), rs.getString("name"));
+			}
+			
+			close(rs, ps, conn);
+			return member;
+		}
 
+	// 전체회원보기
 	public ArrayList<Member> showAllMember() throws SQLException {
 		Connection conn = getConnect();
 
 		String query = "SELECT * FROM member";
 		PreparedStatement ps = conn.prepareStatement(query);
 
-		ArrayList<Member> list = new ArrayList<>();
 		ResultSet rs = ps.executeQuery();
+		ArrayList<Member> list = null;
+		
 		while (rs.next()) {
 			list.add(new Member(rs.getString("id"), rs.getString("password"), rs.getString("name")));
 		}
@@ -66,20 +113,8 @@ public class MemberDAO {
 		return list;
 	}
 	
-	public Member searchMember(String name) throws SQLException {
-		Connection conn = getConnect();
-		
-		String query = "SELECT * FROM member WHERE name=?;";
-		PreparedStatement ps = conn.prepareStatement(query);
-		
-		ps.setNString(1, name);
-		
-		ResultSet rs = ps.executeQuery();
-		Member member = null;
-		if(rs.next()) {
-			new Member(rs.getString("id"), rs.getString("password"), rs.getString("name"));
-		}
-		close(rs, ps, conn);
-	return member;
-	}
-}
+
+	
+	
+
+} 

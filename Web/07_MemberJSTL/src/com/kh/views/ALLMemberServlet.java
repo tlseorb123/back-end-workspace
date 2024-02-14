@@ -25,7 +25,7 @@ public class ALLMemberServlet extends HttpServlet {
 
 		// 2. DAO
 		MemberDAO dao = new MemberDAO();
-		ArrayList<Member> list = new ArrayList<>();
+		ArrayList<Member> list = null;
 		try {
 			list = dao.showAllMember();
 		} catch (SQLException e) {

@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-회원정보가 틀렸습니다.
+<form action="JSTL_cIf3_view.jsp">
+ NUM : <input type="text" name="num"><br>
+ <input type="submit" value="전송">
+</form>
 </body>
 </html>

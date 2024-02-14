@@ -1,6 +1,7 @@
 package com.kh.controller;
 
 import java.sql.Connection;
+
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,18 +16,14 @@ public class RentController {
 
 	RentDAO dao = new RentDAO();
 	
-  public RentController() {
-
-	  
-  
-		public boolean renBook(int bkNo, int memberNo)  {
-			
+        // 1. 책 대여
+		public boolean rentBook(int bkNo, int memberNo)  {
 			try {
 				if(dao.rentBook(bkNo,memberNo)==1) return true;
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-		
+		return false;
 		}
 		
 		public ArrayList<Rent> printRentBook(int No)  {
@@ -39,7 +36,7 @@ public class RentController {
 		return null;
 			
 		}
-		public void deleteRent(int no)  {
+		public boolean deleteRent(int no)  {
 			
 			try {
 				if(dao.deleteRent(no)==1) return true;
@@ -49,3 +46,4 @@ public class RentController {
 		return false;
 		}
 }
+

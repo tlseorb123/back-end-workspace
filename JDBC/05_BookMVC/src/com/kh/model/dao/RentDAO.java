@@ -37,7 +37,7 @@ public class RentDAO {
 			close(ps, conn);
 		}
   
-		public int renBook(int bkNo, int memberNo) throws SQLException {
+		public int rentBook(int bkNo, int memberNo) throws SQLException {
 			Connection conn = getConnect();
 			String query = "INSERT INTO tb_rent(member_no, bk_no) VALUES(?, ?);";
 			PreparedStatement ps = conn.prepareStatement(query);

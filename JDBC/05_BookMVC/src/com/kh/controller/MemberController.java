@@ -17,7 +17,7 @@ public class MemberController {
 		
 		try {
 			 if(dao.registerMember(id, password, name)==1) return true;
-		} catch (ClassNotFoundException e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return false;

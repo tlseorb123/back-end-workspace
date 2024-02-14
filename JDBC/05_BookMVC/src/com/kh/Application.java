@@ -190,7 +190,7 @@ public class Application {
 		System.out.println("대여할 책 번호 : ");
 		int no =Integer.parseInt(sc.nextLine());
 		
-		if(rc.renBook(no, member.getMemberNo())) {
+		if(rc.rentBook(no, member.getMemberNo())) {
 			 System.out.println("성공적으로 책을 대여");
 		}else {
 			System.out.println("책을 대여하는데 실패");
@@ -229,6 +229,8 @@ public class Application {
 	public void deleteRent() {
 		printRentBook();
 	 // printRentBook(내가 대여한 책 조회) 출력 후
+		
+// 취소할 대여 번호 선택을 사용자한테 입력 받아		
 	System.out.println("취소할 대여 번호 : " );
 	int no = Integer.parseInt(sc.nextLine());
 	

@@ -11,16 +11,23 @@ public class Application {
 
 		try{
 		  Class.forName("com.mysql.cj.jdbc.Driver");
-		  Connection conn = DriverManager.getConnection("jdbc:mysql://llocalhost:3306", "root", "1234");
+		  //스키마 x -> 이거 기재! kh!
+		  Connection conn = DriverManager.getConnection("jdbc:mysql://llocalhost:3306/kh", "root", "1234");
 	      
-		  String query = "SELECT emp_id, emp_name FROM employee;";
+		  // query 추가!
+		  String query = "SELECT * FROM employee;";
 		  
 		  PreparedStatement st = conn.prepareStatement(query);
 		  
+		  // executeUpdate X -> exexuteQuery
 		  ResultSet rs = st.executeQuery();
 		
-		  System.out.println(rs.getString("empId") + " / " + rs.getString("empNave"));
-		
+		  // empid ,empname -> emp_id, emp_name
+		  // rs X -> rs.next()
+		  while(rs.next()) {
+		  System.out.println(rs.getString("emp_Id") + " / " + rs.getString("emp_Nave"));
+		  }
+		       
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -8,8 +8,9 @@ import java.sql.SQLException;
 public class Server {
 
 	public static void main(String[] args) throws SQLException, IOException {
-     ServerSocket server = new ServerSocket(3000);
+     ServerSocket server;
 	 try {
+		 server = new ServerSocket(3000);
 		Socket s = server.accept();
 	} catch (IOException e) {
 		
@@ -19,5 +20,5 @@ public class Server {
 }
 
 	
-
+// 포트 번호 저장안해서
 

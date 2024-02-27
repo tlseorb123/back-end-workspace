@@ -4,8 +4,9 @@ import java.util.Objects;
 
 public class Food {
 
-	String name;
-	int kcal;
+	private String name;
+	private int kcal;
+	
 	
 	public Food() {
 		

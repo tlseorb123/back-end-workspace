@@ -1,4 +1,4 @@
-package com.kh.test2.model;
+package com.kh;
 
 public class Rectangle {
  

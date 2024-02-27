@@ -1,4 +1,4 @@
-package com,kh,test3;
+package com.kh.test3;
 
 public class Overloading {
 

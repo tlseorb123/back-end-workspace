@@ -1,5 +1,6 @@
 package com.kh.test7;
 
+import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
@@ -11,11 +12,18 @@ public class Client {
     
 		try {
 			String ip = InetAddress.getLocalHost().getHostName();
-		} catch (UnknownHostException e) {
+			try {
+				Socket s = new Socket(ip, 3000);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			
+		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		}
-		Socket s = new Socket();
+		
 	}
 
 }
+ // ip랑 포트번호 저장 안해서

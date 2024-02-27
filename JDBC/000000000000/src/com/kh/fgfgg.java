@@ -1,4 +1,4 @@
-package fgfgfg;
+package com.kh;
 
 import java.util.Scanner;
 

@@ -18,7 +18,7 @@
 			</c:when>
 			<c:otherwise>
 				<li><a href="views/search.html">회원검색</a></li>
-				<li><a href="ALLMemberServlet">전체회원보기</a></li>
+				<li><a href="AllMemberServlet">전체회원보기</a></li>
 				<li><a href="LogoutServlet">로그아웃</a></li> 
 			</c:otherwise>
 		</c:choose>

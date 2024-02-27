@@ -32,9 +32,9 @@ public class FindMemberServlet extends HttpServlet {
 				request.setAttribute("member", member);
 
 				// 4. 네비게이션
-				request.getRequestDispatcher("/views/find_ok.jsp").forward(request, response);
+				request.getRequestDispatcher("views/find_ok.jsp").forward(request, response);
 			} else {
-				response.sendRedirect("/views/find_fail.jsp");
+				response.sendRedirect("views/find_fail.jsp");
 			}
 
 		} catch (SQLException e) {
